@@ -8,7 +8,7 @@ Hola ✌️  soy el explorer Hisahito y este es mi blog personal donde compartir
 Te invito a conocer mis aprendizajes y leer mis experiencias. Encantado de conocerte! 
 
 Mis expectativas para este proyecto son:
-  -Mejorar y practicar mis conocimcientos en git y github.
+  -Mejorar y practicar mis conocimcientos en git y github. \n
   -Aplicar los aprendido hasta el momento en frontend. HTML5, CSS, JS, REACT, SQL, FIREBASE.
   -Aprender a desarrollar aplicaciones web desde el Backend con NodeJS.
   -Aprender de testing en Javascript.
