@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/hisahito/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Mi ruta por LaunchX</title>
+      <link>https://github.com/hisahito/posts/post_1/</link>
+      <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/hisahito/posts/post_1/</guid>
+      <description>¡ Hey ! Hoy me gustaria contarles un poco de mi ruta de aprendizaje por esta aventura que nos proporciona Microsoft por medio de launchX !
+LaunchX basicamente es una plataforma auspiciada por Microsoft y desarrollada por Innovaccion para todos aquellos que tengan el sueño de convertirse en desarrollador. En mi experencia personal me toco ingresar en un programa de Exploradores con el objetivo de convertirse en desarrolladores y desarrolladoras FullStack, esto abarca desde un onboarding basico en python, pasando por un frontend en diseño Figma, HTML5, CSS, JS, y framworks como vue y angular (todos estos en aspectos basicos), y termiando con aspectos de backend donde los exploradores pueden escoger entre backend en Java o NodeJS.</description>
+    </item>
+    
+    <item>
       <title>La cultura de un desarrollador/desarrolladora de software</title>
       <link>https://github.com/hisahito/posts/intro/</link>
       <pubDate>Mon, 21 Feb 2022 18:16:21 -0600</pubDate>
