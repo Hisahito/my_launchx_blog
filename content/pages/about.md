@@ -7,15 +7,13 @@ menu:
 
 ## Who am I
 
-Hola, aquí vas a leer un poco sobre mi 🤩
+¡ Hey ! Quien es Hisahito? 🤩
 
-> Excidit gente, si orat suo quaeque dura Calydon nata? Pars auro post stetit
-> adfusique imis amplexus. Agmina per fabricator
-> mittere Erymanthon habetque tot.
+> Isai Morales, un placer conocerte!
+> Entusiasta de la tecnologia desde los 6 años cuando mi padre compro una pc con windows 94 :D
+> Futuro Developer de activos digitales.
 
-**Cineres Nile ipsa** origine discurrunt adest Unde, et quem clausus, imo,
-virens quoque tales, potuit. Ingentes insilit corpore nutricis praebebat roganti
-licuit. Denique a vestros adulantum in bella lina parte et arte generi di igitur
-quis, digitis pedes. Cum resonant tamen, namque in anxia. Non nostri trahens
-ancora.
-
+**CryiptoSapien** 
+**BSC ETH BTC** 
+**HTML5 CSS JS** 
+**REACT SQL FIREBASE** 
