@@ -8,12 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/hisahito/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mis expectativas</title>
+      <title>La cultura de un desarrollador/desarrolladora de software</title>
       <link>https://github.com/hisahito/posts/intro/</link>
       <pubDate>Mon, 21 Feb 2022 18:16:21 -0600</pubDate>
       
       <guid>https://github.com/hisahito/posts/intro/</guid>
-      <description>Usa este post para anotar tus expectativas de la misión.</description>
+      <description>¡ Hey !
+En lo personal y desde mi poca experencia, la cultura de un profesional de software se base en los siguentes aspectos:
+-Valentia (hay que tener fuerza y valor para dar el primer paso y los que vendran, el desarrollador tiene pies de plomo 🦾) -Confianza (el desarrollador tiene que tener confianza en si mismo y en su equipo para afrontar los bugs que asechan el mundo tech 🪲) -Informacion (es la herramienta mas importante para un developer!</description>
     </item>
     
   </channel>
