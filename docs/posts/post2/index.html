@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>NFTs in the Binance Chain Tutorial - Bitácora de Viaje de Hisahito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://github.com/hisahitofavicon.png">
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.4f4767d518839223786999cdb69fc7a63791220ecccd236bc732a5f998aaee2d.css">
+  
+
+  
+    <meta name="description" content="How to create yout first NFT"/>
+    <meta property="og:title" content="NFTs in the Binance Chain Tutorial"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://github.com/hisahito/posts/post2/"/>
+    
+    <meta property="og:description" content="How to create yout first NFT"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@hisahitomx"/>
+    <meta name="twitter:creator" content="@hisahitomx"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://github.com/hisahito">Bitácora de Viaje de Hisahito</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-aboutme">
+                <a href="../../pages/about/">AboutMe</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="../../posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>NFTs in the Binance Chain Tutorial<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <h2 id="este-post-se-encuentra-en-construccion-todavia-estoy-en-la-fase-de-prueba-para-confirmar-su-fiabilidad">ESTE POST SE ENCUENTRA EN CONSTRUCCION TODAVIA. ESTOY EN LA FASE DE PRUEBA PARA CONFIRMAR SU FIABILIDAD.</h2>
+<p>Quiero partir desde la idea que conocemos que son las NFTs y de lo que se trata, con esto explicado me dedicare unicamente a explicar el paso a paso de como
+crear una NFT en la red de Binance Chain.
+Quiero aclarar tambien que se trata de mismo proceso si desea &ldquo;Mintear&rdquo; una NFT en la red de Ethereum, ya que utilizarremos las mismas herramientas utilizadas
+en ambas redes.</p>
+<p>##Herramientas:
+-Remix IDE (VM de Ethereum, es un IDE para crear contrartos en Solidity)
+-Metamask (cartera de crypto activos)
+-Visual Studio Code (para generar archivos formatos .JSON)
+-app.pinata.cloud (aplicacion que utiliza IPFS necesaria para almacenar nuestra NFT)</p>
+<p>Paso 1:
+-Un poco de familiarizacion con el precio de BNB (la moneda oficial de Binance) <a href="https://www.binance.com/es-MX/trade/BNB_BUSD">https://www.binance.com/es-MX/trade/BNB_BUSD</a>
+-El costo del gas por &ldquo;minteo&rdquo; de NFTs en esta red
+-El explorador de la red de Binance para rastrear transacciones e informacion importante para rastrear tu NFT y desplegarla en tu wallet</p>
+<p>Paso 2: Remix Virtual Machine de ETH.
+<!-- raw HTML omitted --></p>
+<p>Creamos una carpeta con el nombre que gustes, en mi caso le puse el nombre de NFT y creamos un archivo nuevo .sol, en mi caso lo nombre firstNFT.sol
+el codigo que ves en la imagen esta a continuacion:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="c1">// SPDX-License-Identifier: MIT
+</span><span class="c1"></span><span class="k">pragma solidity</span> <span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+ 
+<span class="kn">import</span> <span class="s">&#34;https://github.com/0xcert/ethereum-erc721/src/contracts/tokens/nf-token-metadata.sol&#34;</span><span class="p">;</span>
+<span class="kn">import</span> <span class="s">&#34;https://github.com/0xcert/ethereum-erc721/src/contracts/ownership/ownable.sol&#34;</span><span class="p">;</span>
+ 
+<span class="kd">contract</span> <span class="nc">nft1</span> <span class="k">is</span> <span class="n">NFTokenMetadata</span><span class="p">,</span> <span class="n">Ownable</span> <span class="p">{</span>
+ <span class="kt">uint256</span> <span class="k">public</span> <span class="n">tokenCounter</span><span class="p">;</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">nftName</span> <span class="o">=</span> <span class="s">&#34;SandersCall&#34;</span><span class="p">;</span>
+    <span class="n">nftSymbol</span> <span class="o">=</span> <span class="s">&#34;THECALL&#34;</span><span class="p">;</span>
+    <span class="n">tokenCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+ 
+  <span class="kd">function</span> <span class="nf">mint</span><span class="p">(</span><span class="kt">address</span> <span class="n">_to</span><span class="p">,</span> <span class="kt">string</span> <span class="n">calldata</span> <span class="n">_uri</span><span class="p">)</span> <span class="k">external</span> <span class="n">onlyOwner</span> <span class="p">{</span>
+    <span class="nb">super</span><span class="p">.</span><span class="n">_mint</span><span class="p">(</span><span class="n">_to</span><span class="p">,</span> <span class="n">tokenCounter</span><span class="p">);</span>
+    <span class="nb">super</span><span class="p">.</span><span class="n">_setTokenUri</span><span class="p">(</span><span class="n">tokenCounter</span><span class="p">,</span> <span class="n">_uri</span><span class="p">);</span>
+    <span class="n">tokenCounter</span> <span class="o">=</span> <span class="n">tokenCounter</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+ 
+<span class="p">}</span>
+</code></pre></div><p>Paso 3: Descargemos Metamask. <a href="https://metamask.io">https://metamask.io</a>  Se trata de una simple cartera de crypto activos. Aqui es donde veremos nuestra NFT minteada y aqui sera donde la portaremos todo el tiempo,
+desde Metamask podemos enviarla a alguien mas o inclusive recibir mas. Como primer paso la necesitamos para recibir nuestra NFT desde REMIX una vez la mintiemos. Es importante aclarar que es necesario saber perfectamene en que red
+estamos creando nuestra NFT, pues en Metamask tambien podemos cambiar de red. Continuare el tutorial suponiendo que la red donde crearemos nuestra NFT es la red de Binance.
+Dicho esto, es necesario entonces agregar la red de Binance a nuestra wallet de metamask, para ello sigue este tutorial: <a href="https://academy.binance.com/es/articles/connecting-metamask-to-binance-smart-chain">https://academy.binance.com/es/articles/connecting-metamask-to-binance-smart-chain</a></p>
+<p>Paso 4: IPFS Pinnata
+Pinnata se trata de una herramienta para almacenar archivos en la nube. Con esto pinnata nos genera un link valido para utilizar en nuestro contrato en Solidity.
+<!-- raw HTML omitted --></p>
+<p>Pinnata es muy intuitivo y facil de usar. Primer subamos nuestra NFT en el formato que imagen que tenemos o hicimos:
+<!-- raw HTML omitted --></p>
+<p>Una vez pinnata nos muestra que se subio nuestro archivo es importante que guardemos el URL que nos genero pues lo utilizaremos despues.
+<!-- raw HTML omitted --></p>
+<p>Paso 5 Visual Studio Code
+VSC nos ayudara a generar el tokenURI necesario en nuestro contrato inteligente. Abramos nuestro IDE y creemos un archivo .json
+creemos un objeto con ciertas caracteristas descriptivas de nuestra NFT:
+<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="s2">&#34;name&#34;</span><span class="o">:</span> <span class="s2">&#34;nombre de tu NFT&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;description&#34;</span><span class="o">:</span> <span class="s2">&#34;esta es mi primera NFT en la red de Binance&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;valor&#34;</span><span class="o">:</span> <span class="mi">50</span><span class="nx">BNB</span><span class="p">,</span>
+  <span class="s2">&#34;image&#34;</span><span class="o">:</span> <span class="s2">&#34;aqui va la URL que nos dio pinnata&#34;</span>
+<span class="p">}</span>
+</code></pre></div><p>Es importante mencionar que en este archivo podemos poner los valores que queramos, esto solo son descriptivos y ayudaran a que nuestra NFT tenga una historia que contar.
+ahora guardemos este archivo y subamoslo a Pinnata. Guardemos este nuevo URL. Este nuevo URL es el URL final que ira en nuestro contrato inteligente.</p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/hisahitomx" title="twitter" target="_blank" rel="noopener">
+          <img src="../../images/social/twitter.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/hisahito" title="github" target="_blank" rel="noopener">
+          <img src="../../images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="../../js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>
