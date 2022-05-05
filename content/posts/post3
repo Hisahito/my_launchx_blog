@@ -1,0 +1,18 @@
+---
+title: NFTs in the Binance Chain Tutorial
+date: 2022-05-05
+description: How to mint your own NFT STEP BY STEP
+---
+
+## Lo primero: tu obra digital
+Este es el momento en el que tienes que sacar tu vena artística y hacer esa foto que siempre has deseado.
+
+O tal vez seas diseñador gráfico y tu NFT sea 100% arte digital. Todo es posible. Eso sí, siempre que sea una foto, un vídeo, un GIF o un audio.
+
+## Proceso de creación
+Ahora que ya tenemos la foto o vídeo que queremos convertir en NFT llega la parte técnica. En este punto necesitas tener una wallet en la red BNB Chain. Puedes usar Metamask. Descarga aqui Metamask: https://metamask.io
+Una vez que tenemos nuestra wallet te daras cuenta que esta conectada a la red de ETH, es neceario cambiar a la red de Binance, para ello sigue este simple tutorial: https://academy.binance.com/es/articles/connecting-metamask-to-binance-smart-chain
+Es importante mencionar que es necesario tener BNB pues pagarmos algunas fees llamadas "gas" para mintear tu NFT y pagar envios. Puedes adquirir BNB la moneda de Binance aqui: https://www.binance.com/es
+No es necesario que compres 1 BNB para mintear 1 NFT pues el costo aprox de mintear una NFT es de 0,013 BNB pero si planeas mintear mas medio BNB seria lo aconsejable.
+
+Accederemos a https://www.bakeryswap.org/ y como en cualquier DEX simplemente haremos clic en "Connect to wallet" para poder acceder a nuestra wallet.
