@@ -11,8 +11,8 @@ description: How to create yout first NFT
 3. Descargemos Metamask
 4. Creando un archivo IPFS
 5. Creando una NFT Programable
-6. Desplegando Smart Contract en Solidity usando Remix
-7. Minteando NFT
+5.2 Desplegando Smart Contract en Solidity usando Remix
+5.3 Minteando NFT
 
 ##Es necesario un poco de:
 -familiarizacion con la red o blockchain donde se desea postear su NFT, tambien con el precio de la misma (BNB, ETH, POLYGON, SOL y mas)
