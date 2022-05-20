@@ -14,16 +14,16 @@ description: How to create yout first Programmable NFT
 5.2 Desplegando Smart Contract en Solidity usando Remix
 5.3 Minteando NFT
 
-**Es necesario un poco de:**
--familiarizacion con la red o blockchain donde se desea postear su NFT, tambien con el precio de la misma (BNB, ETH, POLYGON, SOL y mas)
--NO es necesario saber todo solo precios de la moneda (la moneda oficial de Binance) https://www.binance.com/es-MX/trade/BNB_BUSD
--El costo del gas por "minteo" de NFTs en esta red 
+**Es necesario un poco de:**. 
+-familiarizacion con la red o blockchain donde se desea postear su NFT, tambien con el precio de la misma (BNB, ETH, POLYGON, SOL y mas). 
+-NO es necesario saber todo solo precios de la moneda (la moneda oficial de Binance) https://www.binance.com/es-MX/trade/BNB_BUSD. 
+-El costo del gas por "minteo" de NFTs en esta red. 
 -El explorador de la red nos ayuda en todo esto. Rastrear transacciones e informacion de costos, datos para desplegar tu NFT en tu wallet y mas. Te dejo el explorador de Binance https://bscscan.com pero todas las blockchain tienen uno.
 
-**Herramientas:**
--Remix IDE (VM de Ethereum, es un IDE para crear contratos en Solidity)
--Metamask (cartera de crypto activos)
--Visual Studio Code (para generar archivos formatos .JSON)
+**Herramientas:**. 
+-Remix IDE (VM de Ethereum, es un IDE para crear contratos en Solidity). 
+-Metamask (cartera de crypto activos). 
+-Visual Studio Code (para generar archivos formatos .JSON). 
 -app.pinata.cloud (aplicacion que utiliza IPFS necesaria para almacenar nuestra NFT)
 
 **¡Empezemos!**
@@ -35,9 +35,9 @@ La red de estas NFT NO programables estan guardadas usualmente bajo un SmartCont
 
 Por otro lado, una NFT programable, es cuando nosotros somos los que creamos ese SmartContract maestro el cual puede tener cualquier caracteristica especial que nosotros queramos en nuestras NFT y sobre este smartContract maestro generara el MINT de las Token ERC-721 como el supply que pongamos a disposicion a nuestra comunidad , usuarios o clientes u otras funciones.
 
-Por dar un ejemplo de que se podria lograr con la programacion del SmartContract seria:
-1.- Utilizar la NFT como un pase especial de Acceso a contenido "Premium".
-2.- Utilizar la NFT para que los holders de ella obtengan ingresos pasivos con el tiempo.
+Por dar un ejemplo de que se podria lograr con la programacion del SmartContract seria:  
+1.- Utilizar la NFT como un pase especial de Acceso a contenido "Premium".  
+2.- Utilizar la NFT para que los holders de ella obtengan ingresos pasivos con el tiempo.  
 3.- Utilizar la NFT para Gaming dandole a cada NFT el id de un objeto en el Juego.
 
 Las NFT tienen la caracteristica principal de ser un identificador unico e inmutable, pero no solo se limita a esto ya dependera de el uso que queramos darle.
