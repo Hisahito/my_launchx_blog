@@ -1,7 +1,7 @@
 ---
 title: NFTs in the Binance Chain Tutorial
 date: 2022-05-05
-description: How to create yout first NFT
+description: How to create yout first Programmable NFT
 ---
 
 ##indice
