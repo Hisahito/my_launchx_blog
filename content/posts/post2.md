@@ -18,7 +18,7 @@ description: How to create yout first NFT
 -familiarizacion con la red o blockchain donde se desea postear su NFT, tambien con el precio de la misma (BNB, ETH, POLYGON, SOL y mas)
 -NO es necesario saber todo solo precios de la moneda (la moneda oficial de Binance) https://www.binance.com/es-MX/trade/BNB_BUSD
 -El costo del gas por "minteo" de NFTs en esta red 
--El explorador de la red para rastrear transacciones e informacion importante para rastrear tu NFT y desplegarla en tu wallet. Te dejo el explorador de Binance https://bscscan.com
+-El explorador de la red nos ayuda en todo esto. Rastrear transacciones e informacion de costos, datos para desplegar tu NFT en tu wallet y mas. Te dejo el explorador de Binance https://bscscan.com pero todas las blockchain tienen uno.
 
 ##Herramientas:
 -Remix IDE (VM de Ethereum, es un IDE para crear contratos en Solidity)
@@ -27,13 +27,13 @@ description: How to create yout first NFT
 -app.pinata.cloud (aplicacion que utiliza IPFS necesaria para almacenar nuestra NFT)
 
 ¡Empezemos!
+
 ##Paso 1:
+Pasemos a explicar un poco sobre que es una NFT, las NFT mas conocidas actualmente son las NO programables usualmente creadas bajo herramientas gratuitas ofrecidas en NFT Marketplaces para ser listados en su  catalogo de venta, estas NFT usualmente son "Arte" y dentro de su codigo solo tiene un link IPFS con direccion al Arte que el creador puso en Venta.
 
-Pasemos a explicar un poco sobre que es una NFT, las NFT mas conocidas actualmente son las no programables usualmente creadas bajo herramientas gratuitas ofrecidas en NFT Marketplaces para ser listados en su  catalogo de venta, estas NFT usualmente son "Arte" y dentro de su codigo solo tiene un link IPFS con direccion al Arte que el creador puso en Venta.
+La red de estas NFT NO programables estan guardadas usualmente bajo un SmartContract Maestro de el Marketplace donde se origino el Mint (Creacion del Token ERC-721), haciendo asi posible su facil transferencia entre compradores y vendedores.
 
-La red de estas NFT no programables estan guardadas usualmente bajo un SmartContract Maestro de el Marketplace donde se origino el Mint (Creacion del Token ERC-721), haciendo asi posible su facil transferencia entre compradores y vendedores.
-
-Las NFT programables, es cuando nosotros somos los que creamos ese SmartContract maestro el cual puede tener cualquier caracteristica especial que nosotros queramos en nuestras NFT y sobre este smartContract maestro se generara el MINT de las Token ERC-721 que sera el supply que pongamos a disposicion a nuestra comunidad , usuarios o clientes.
+Por otro lado, una NFT programable, es cuando nosotros somos los que creamos ese SmartContract maestro el cual puede tener cualquier caracteristica especial que nosotros queramos en nuestras NFT y sobre este smartContract maestro generara el MINT de las Token ERC-721 como el supply que pongamos a disposicion a nuestra comunidad , usuarios o clientes u otras funciones.
 
 Por dar un ejemplo de que se podria lograr con la programacion del SmartContract seria:
 1.- Utilizar la NFT como un pase especial de Acceso a contenido "Premium".
@@ -46,14 +46,13 @@ Las NFT tienen la caracteristica principal de ser un identificador unico e inmut
 Aqui te dejo un tutorial paso a paso para crear una NFT NO Programable: https://github.com/Hisahito/my_launchx_blog/blob/master/content/posts/post3.md
 
 
-##Paso 3: Descargemos Metamask. https://metamask.io  Se trata de una simple cartera de crypto activos. Aqui es donde veremos nuestra NFT minteada y aqui sera donde la portaremos todo el tiempo,
-desde Metamask podemos enviarla a alguien mas o inclusive recibir mas. Como primer paso la necesitamos para recibir nuestra NFT desde REMIX una vez la mintiemos. 
+##Paso 3: 
+Descargemos Metamask. https://metamask.io  Se trata de una simple cartera de crypto activos. Aqui es donde veremos nuestra NFT minteada y aqui sera donde la portaremos todo el tiempo,
+A Metamask reciberemos nuestra NFT una vez la mintiemos y tambien podremos enviarla a otra cartera si lo deseamos, siempre y cuando pagemos la tarifa de envio(gas fee).
 
-Es importante aclarar que es necesario saber perfectamene en que red 
-estamos creando nuestra NFT, cada red principal (Binance,ETH,Polygon,Avalanche) tambien tiene una red de pruebas donde el costo del token es gratis y es una buena alternativa a utilizar para hacer pruebas de nuestros SmartContracts antes de pasarlos a produccion.
+Es importante aclarar que es necesario saber perfectamene en que red estamos deployando nuestra NFT pues como veras en al parte de arriba de Matamask aparece que estamos conectado a la red de ETH. Podemos cambiar de red siempre y cuando agregemos los datos que Metmask nos pide.
 
-En esta prueba  utilizaremos la Testnet de Binance, para ello sera necesario agregar la testnet a metamask: LINK A TUTO
-y conseguir nuestros primeros BNB de la testnet gratis: LINK A FAUCET
+En esta prueba  utilizaremos la red de Binance, para ello sera necesario agregar su red a metamask te dejo un paso a paso aqui: https://academy.binance.com/es/articles/connecting-metamask-to-binance-smart-chain
 
 
 ##Paso 4: IPFS Pinnata
@@ -69,7 +68,7 @@ Una vez pinnata nos muestra que se subio nuestro archivo es importante que guard
 
 
 ##Paso 5
-Listo tenemos nuestra imagen arriba en "formato" IPFS ahora VSC nos ayudara a generar el tokenURI necesario en nuestro contrato inteligente. Abramos nuestro IDE y creemos un archivo .json
+Listo tenemos nuestra imagen arriba en "formato" IPFS ahora VSC nos ayudara a generar el tokenURI necesario en nuestro contrato inteligente. Abramos nuestro VSC y creemos un archivo .json
 creemos un objeto con ciertas caracteristas descriptivas de nuestra NFT:
 <img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 13 41 56" src="https://user-images.githubusercontent.com/83984969/167000056-f41d9ea1-83a5-4ae2-b802-fc8746eaba01.png">
 
@@ -86,7 +85,7 @@ creemos un objeto con ciertas caracteristas descriptivas de nuestra NFT:
 Es importante mencionar que en este archivo podemos poner los valores que queramos, esto solo son descriptivos y ayudaran a que nuestra NFT tenga una historia que contar.
 Ahora guardemos este archivo y volvamos a Pinnata para subir nuestro JSON. Guardemos este nuevo URL. Este nuevo URL es el URL final que ira en nuestro contrato inteligente.
 
-Paso 5.1.- Remix ETH Virtual Machine.
+##Paso 5.1.- Remix ETH Virtual Machine.
 
 Ahora si adentremenos a solidity !! Usaremos el IDE de Remix https://remix.ethereum.org
 
@@ -122,17 +121,30 @@ contract nft1 is NFTokenMetadata, Ownable {
 Expliquemos un poco el codigo:
 Pragma solidity es la version de solidity que estaremos utilizando para nuestro SmartContract.
 -Import se utiliza para agregar un SmartContract y utilizar las funciones de estos, se puede importar localmente o por medio de URL solo en remix.
--Contract xnombrex es xcaracteristicas del contrato 1x,xcaracteristicas del contrato 2x { } 
+
+```solidity
+contract nft1 is NFTokenMetadata, Ownable
+```
 xnombrex: es el nombre que tendra nuestro contrato.
 xcaracteristicas del contratox: es de que tipo sera nuestro contrato o si podra llamar funciones de otro smartcontract , en este caso puede llamar funciones de NFTokenMetadata y Ownable contratos que estan dentro de las librerias de Github que descargamos.
 
-uint256 public tokenCounter; : es la declaracion de nuestra primera variable tokenCounter de tipo uint256.
+```solidity
+uint256 public tokenCounter;
+```
+se trata de la declaracion de nuestra primera variable tokenCounter de tipo uint256.
 
-Constructor() : Es una funcion que todos los SmartContract tienen y sirve para iniciar las variables con un valor en cuanto se haga el deploy.
+```solidity
+Constructor()
+```
+Es una funcion que todos los SmartContract tienen y sirve para iniciar las variables con un valor en cuanto se haga el deploy.
 
-function mint(address _to, string calldata _uri) external onlyOwner : Esta es la funcion que genera las token ERC-721 , solicita la direccion de la cartera a la que deseas mandar la NFT y la url del Json , esta funcion solo puede ser ejecutada por la cartera Owner del SmartContract.
+```solidity
+function mint(address _to, string calldata _uri) external onlyOwner
+```
+Esta es la funcion que genera las token ERC-721 , solicita la direccion de la cartera a la que deseas mandar la NFT y la url del Json , esta funcion solo puede ser ejecutada por la cartera Owner del SmartContract.
 
-Paso 5.2.- Compilamos el Codigo para que Remix descarge el repositorio de github donde se encuentran las funciones del protocolo ERC-721 de la libreria de github:
+
+##Paso 5.2.- Compilamos el Codigo para que Remix descarge el repositorio de github donde se encuentran las funciones del protocolo ERC-721 de la libreria de github:
 
 ![30b636eb-17d8-43a0-a5a4-314b6ed954aa](https://user-images.githubusercontent.com/83984969/169591970-54cace50-875f-4240-97e8-e32f5ac732c2.jpg)
 
@@ -140,7 +152,7 @@ Paso 5.2.- Compilamos el Codigo para que Remix descarge el repositorio de github
 Recuerden poner el compilador en la version 0.8.0 justo como el pragma solidity indica , sino esto nos podria dar error.
 
 
-Paso 5.3.- Deploy
+##Paso 5.3.- Deploy
 
 En la seccion de Deploy , cambiamos a inject Web3 para que remix se conecte con Metamask y sepa que utilizaremos la red de pruebas de Binance que se diferencia con el numero 97.
 ![unnamed5](https://user-images.githubusercontent.com/83984969/169592167-d879c2cb-c698-4db1-92cc-a7e57e9bd7a9.jpeg)
@@ -163,12 +175,20 @@ Aqui agregamos la direccion de nuestra cartera y la URL del JSON que hicimos en 
 
 
 
-Podemos hacer llamados a la blockchain con nuestras funciones para recibir datos de nuestro reciente SmartContract.
+Verificamos si la transacion se realizo con exito confirmandolo en el explorador de la red de Binance, este nos dara todos los daros importantes 
+
+![d43e130a-7d56-41c6-88fa-3e9f36174b2a](https://user-images.githubusercontent.com/83984969/169596878-aa4052eb-54ca-47e1-b21a-9e8b9df89b57.jpg)
+
+Felicidades! Haz programado tu primera NFT!!! 
+
+Recuerda que con las funciones creadas podemos hacer llamados a la blockchain para recibir datos de nuestro reciente SmartContract todo desde el IDE de Remix.
 
 Por ejemplo podemos observar la cantidad de tokens que a generado  nuestro smartContract con tokenCounter.
 Tambien podemos ver quien es dueño de la NFT numero 1 con OwnerOf.
 Podemos ver el nombre y quien es el dueño de este SmartContract con Owner y Name , asi como tambien la URL de cada Token.
 Tambien podemos observar cuantas de nuestra NFT tiene cierta cartera , ingresando su direccion en BalanceOf.
+
+Espero este tutorial haya sido de ayuda! no dudes en compartirlo.
 
 
 
