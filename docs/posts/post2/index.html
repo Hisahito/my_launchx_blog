@@ -65,8 +65,8 @@
 <li>Creando una NFT sin programar</li>
 <li>Descargemos Metamask</li>
 <li>Creando un archivo IPFS</li>
-<li>Creando una NFT Programable
-5.2 Desplegando Smart Contract en Solidity usando Remix
+<li>Creando una NFT Programable.
+5.2 Desplegando Smart Contract en Solidity usando Remix.
 5.3 Minteando NFT</li>
 </ol>
 <p><strong>Es necesario un poco de:</strong>.
@@ -81,7 +81,7 @@
 -app.pinata.cloud (aplicacion que utiliza IPFS necesaria para almacenar nuestra NFT)</p>
 <p><strong>¡Empezemos!</strong></p>
 <p><img src="https://user-images.githubusercontent.com/83984969/169622949-7908f8c3-5a0c-44bf-b08e-60b6df3081bd.png" alt="nft generica"></p>
-<p><strong>Paso 1:</strong>
+<p><strong>1.- Intro</strong>
 Pasemos a explicar un poco sobre que es una NFT, las NFT mas conocidas actualmente son las <strong>NO programables</strong> usualmente creadas bajo herramientas gratuitas ofrecidas en NFT Marketplaces(OpenSea.io, bakery, y otras) para ser listados en su  catalogo de venta, estas NFT usualmente son &ldquo;Arte&rdquo; y dentro de su codigo solo tiene un link IPFS con direccion al Arte que el creador puso en Venta.</p>
 <p>La red de estas <strong>NFT NO programables</strong> estan guardadas usualmente bajo un SmartContract Maestro de el Marketplace donde se origino el Mint (Creacion del Token ERC-721), haciendo asi posible su facil transferencia entre compradores y vendedores.</p>
 <p>Por otro lado, una <strong>NFT programable</strong>, es cuando nosotros somos los que creamos ese SmartContract maestro el cual puede tener cualquier caracteristica especial(funcion) que nosotros queramos en nuestras NFT y sobre este smartContract maestro se generara el MINT de las Token ERC-721 como el supply que pongamos a disposicion a nuestra comunidad , usuarios o clientes.</p>
@@ -90,23 +90,23 @@ Pasemos a explicar un poco sobre que es una NFT, las NFT mas conocidas actualmen
 2.- Utilizar la NFT para que los holders de ella obtengan ingresos pasivos con el tiempo.<br>
 3.- Utilizar la NFT para Gaming dandole a cada NFT el id de un objeto en el Juego.</p>
 <p>Las NFT tienen la caracteristica principal de ser un identificador unico e inmutable, pero no solo se limita a esto ya dependera de el uso que queramos darle.</p>
-<p><strong>Paso 2</strong>
+<p><strong>2.- Creando una NFT sin programar</strong>
 Aqui te dejo un tutorial paso a paso para crear una <strong>NFT NO Programable</strong>: <a href="https://github.com/Hisahito/my_launchx_blog/blob/master/content/posts/post3.md">https://github.com/Hisahito/my_launchx_blog/blob/master/content/posts/post3.md</a>
 <img src="https://user-images.githubusercontent.com/83984969/169623244-23e3a484-ab25-4fc6-9660-34eac2020c7e.png" alt="Captura de Pantalla 2022-05-05 a la(s) 14 05 16"></p>
-<p><strong>Paso 3:</strong>
-Descargemos Metamask. <a href="https://metamask.io">https://metamask.io</a>  Se trata de una simple cartera de crypto activos. Aqui es donde veremos nuestra NFT minteada y aqui sera donde la portaremos todo el tiempo,
+<p><strong>3.- Descargando Metamask</strong>
+<a href="https://metamask.io">https://metamask.io</a>  Se trata de una simple cartera de crypto activos. Aqui es donde veremos nuestra NFT minteada y aqui sera donde la portaremos todo el tiempo,
 A Metamask reciberemos nuestra NFT una vez la mintiemos y tambien podremos enviarla a otra cartera si lo deseamos, siempre y cuando pagemos la tarifa de envio(gas fee).</p>
 <p>Es importante aclarar que es necesario saber perfectamene en que red estamos deployando nuestra NFT pues como veras en al parte de arriba de Matamask aparece que estamos conectado a la red de ETH. Podemos cambiar de red siempre y cuando agregemos los datos que Metmask nos pide.
 <img src="https://user-images.githubusercontent.com/83984969/169623385-5cae9e8c-5e56-46a7-8b98-e74ba74ebedb.png" alt="metamask networks"></p>
 <p>En esta prueba  utilizaremos la red de Binance, para ello sera necesario agregar su red a metamask te dejo un paso a paso aqui: <a href="https://academy.binance.com/es/articles/connecting-metamask-to-binance-smart-chain">https://academy.binance.com/es/articles/connecting-metamask-to-binance-smart-chain</a></p>
-<p><strong>Paso 4: IPFS Pinnata</strong>
+<p><strong>4.- IPFS Pinnata</strong>
 Pinnata se trata de una herramienta para almacenar archivos en la nube. Con esto pinnata nos genera un link valido para utilizar en nuestro contrato en Solidity.
 <img src="https://user-images.githubusercontent.com/83984969/169598620-62ffdde8-7fbb-4fae-8c53-f62436ca8a3c.png" alt="Captura de Pantalla 2022-05-05 a la 12 55 55"></p>
 <p>Pinnata es muy intuitivo y facil de usar. Primer subamos nuestra NFT en el formato de la imagen que tenemos o hicimos:
 <img src="https://user-images.githubusercontent.com/83984969/169598734-9cc5de8d-be3f-4e1d-b472-94fb6cf72b40.png" alt="Captura de Pantalla 2022-05-05 a la 13 19 14"></p>
 <p>Una vez pinnata nos muestra que se subio nuestro archivo <strong>es importante que guardemos el URL</strong> que nos genero pues lo utilizaremos mas tarde.
 <img src="https://user-images.githubusercontent.com/83984969/169598764-ac452857-fd2d-46ac-8ff9-3e18a647ad03.png" alt="Captura de Pantalla 2022-05-05 a la 13 17 08"></p>
-<p><strong>Paso 5</strong>
+<p><strong>5- Creando una NFT Programable</strong>
 Listo tenemos nuestra imagen arriba en &ldquo;formato&rdquo; IPFS ahora VisualStudioCode nos ayudara a generar el tokenURI necesario en nuestro contrato inteligente. Abramos nuestro VSC y creemos un archivo .json
 creemos un objeto con ciertas caracteristas descriptivas de nuestra NFT:
 <!-- raw HTML omitted --></p>
@@ -156,11 +156,10 @@ xcaracteristicas del contratox: es de que tipo sera nuestro contrato o si podra 
 </code></pre></div><p>Es una funcion que todos los SmartContract tienen y sirve para iniciar las variables con un valor en cuanto se haga el deploy.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-solidity" data-lang="solidity"><span class="kd">function</span> <span class="nf">mint</span><span class="p">(</span><span class="kt">address</span> <span class="n">_to</span><span class="p">,</span> <span class="kt">string</span> <span class="n">calldata</span> <span class="n">_uri</span><span class="p">)</span> <span class="k">external</span> <span class="n">onlyOwner</span>
 </code></pre></div><p>Esta es la funcion que genera las token ERC-721 , solicita la direccion de la cartera a la que deseas mandar la NFT y la url del Json , esta funcion solo puede ser ejecutada por la cartera Owner del SmartContract.</p>
-<p><strong>Paso 5.2.-</strong>
+<p><strong>5.2. Deployando un contrato inteligente-</strong>
 Compilamos el Codigo para que Remix descarge el/los repositorios de github donde se encuentran las funciones del protocolo ERC-721 de la libreria de github:</p>
 <p><img src="https://user-images.githubusercontent.com/83984969/169591970-54cace50-875f-4240-97e8-e32f5ac732c2.jpg" alt="30b636eb-17d8-43a0-a5a4-314b6ed954aa"></p>
 <p>Recuerden poner el compilador en la version 0.8.0 justo como el pragma solidity indica , sino esto nos podria dar error.</p>
-<p><strong>Paso 5.3.- Deploy</strong></p>
 <p>En la seccion de Deploy , cambiamos a inject Web3 para que remix se conecte con Metamask y sepa que utilizaremos la red de pruebas de Binance que se diferencia con el numero 97.
 <img src="https://user-images.githubusercontent.com/83984969/169592167-d879c2cb-c698-4db1-92cc-a7e57e9bd7a9.jpeg" alt="unnamed5"></p>
 <p>Verificamos que estamos haciendo deploy de nuestro contrato y con nuestra cartera.
@@ -171,7 +170,8 @@ Una vez listos ejecutamos el deploy:</p>
 <p>Se verificara que se ejecuto el deploy en la testnet y se confirma la tx.
 <img src="https://user-images.githubusercontent.com/83984969/169592634-e32231d1-ad82-46fc-ae12-f027d4d1d839.jpeg" alt="unnamed4"></p>
 <p>Revisamos en remix la direccion de nuestro SmartContract y desde remix podemos interactuar con las funciones de esta.         <img src="https://user-images.githubusercontent.com/83984969/169592696-bb2c327a-2494-4d29-a76d-62abe3426707.jpeg" alt="unnamed2"></p>
-<p>Por ultimo podemos hacer Mint de nuestra primera Token ERC-721 utilizando la funcion Mint.
+<p><strong>Paso 5.3.- Mint de tu NFT</strong>
+Por ultimo podemos hacer Mint de nuestra primera Token ERC-721 utilizando la funcion Mint.
 <strong>Aqui agregamos la direccion de nuestra cartera y la URL del JSON que hicimos en el paso 4 que contiene nuestra imagen.</strong>
 <img src="https://user-images.githubusercontent.com/83984969/169592801-3ef35313-aad5-410b-824d-88b0495f0a7e.jpeg" alt="unnamed3"></p>
 <p>Verificamos si la transacion se realizo con exito confirmandolo en el explorador de la red de Binance, ingresando el address/Hash de la NFT deployada, el explorador nos dara todos los datos importantes</p>
