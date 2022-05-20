@@ -15,7 +15,8 @@ description: How to create yout first NFT
 7. Minteando NFT
 
 ##Es necesario un poco de:
--familiarizacion con red o blockchain donde sea postear su NFT y con el precio de la misma (BNB, ETH, POLYGON, SOL y mas) (la moneda oficial de Binance) https://www.binance.com/es-MX/trade/BNB_BUSD
+-familiarizacion con la red o blockchain donde se desea postear su NFT, tambien con el precio de la misma (BNB, ETH, POLYGON, SOL y mas)
+-NO es necesario saber todo solo precios de la moneda (la moneda oficial de Binance) https://www.binance.com/es-MX/trade/BNB_BUSD
 -El costo del gas por "minteo" de NFTs en esta red 
 -El explorador de la red para rastrear transacciones e informacion importante para rastrear tu NFT y desplegarla en tu wallet. Te dejo el explorador de Binance https://bscscan.com
 
