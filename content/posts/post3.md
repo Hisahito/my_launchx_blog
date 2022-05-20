@@ -1,7 +1,7 @@
 ---
-title: NFTs in the Binance Chain Tutorial
+title: NFT NO Programmable
 date: 2022-05-05
-description: How to mint your own NFT STEP BY STEP
+description: How to create a NFT NO Programmable
 ---
 
 ## Lo primero: tu obra digital
