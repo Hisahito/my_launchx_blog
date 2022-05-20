@@ -57,20 +57,24 @@ En esta prueba  utilizaremos la red de Binance, para ello sera necesario agregar
 
 ##Paso 4: IPFS Pinnata
 Pinnata se trata de una herramienta para almacenar archivos en la nube. Con esto pinnata nos genera un link valido para utilizar en nuestro contrato en Solidity.
-<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 12 55 55" src="https://user-images.githubusercontent.com/83984969/166987583-ecc9b6e2-9b21-4ccc-8d76-751bc6799d29.png">
+<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 12 55 55" src="https://user-images.githubusercontent.com/83984969/169598620-62ffdde8-7fbb-4fae-8c53-f62436ca8a3c.png">
+
 
 
 Pinnata es muy intuitivo y facil de usar. Primer subamos nuestra NFT en el formato que imagen que tenemos o hicimos:
-<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 13 19 14" src="https://user-images.githubusercontent.com/83984969/166987908-37c93dac-5302-4ea3-9d50-3e45b8530306.png">
+<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 13 19 14" src="https://user-images.githubusercontent.com/83984969/169598734-9cc5de8d-be3f-4e1d-b472-94fb6cf72b40.png">
+
 
 Una vez pinnata nos muestra que se subio nuestro archivo es importante que guardemos el URL que nos genero pues lo utilizaremos despues.
-<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 13 17 08" src="https://user-images.githubusercontent.com/83984969/166988440-e6e59a5d-0469-4876-98df-95beae17bd90.png">
+<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 13 17 08" src="https://user-images.githubusercontent.com/83984969/169598764-ac452857-fd2d-46ac-8ff9-3e18a647ad03.png">
+
 
 
 ##Paso 5
 Listo tenemos nuestra imagen arriba en "formato" IPFS ahora VSC nos ayudara a generar el tokenURI necesario en nuestro contrato inteligente. Abramos nuestro VSC y creemos un archivo .json
 creemos un objeto con ciertas caracteristas descriptivas de nuestra NFT:
-<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 13 41 56" src="https://user-images.githubusercontent.com/83984969/167000056-f41d9ea1-83a5-4ae2-b802-fc8746eaba01.png">
+<img width="1440" alt="Captura de Pantalla 2022-05-05 a la(s) 13 41 56" src="https://user-images.githubusercontent.com/83984969/169598880-aa4cf1d9-91e4-47ca-b2ae-1b65ba6835e1.png">
+
 
 
 ```javascript
