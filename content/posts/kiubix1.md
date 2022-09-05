@@ -6,16 +6,21 @@ description: Pros y Contras de implementar Strapi + GraphQL + React.
 
 **indice**
 
-1. ¿Qué es GraphQL y como implementarlo?
-2. Implementación de Strapi con GraphQL y React.
-3. Beneficios y desventajas de Strapi + React
-4. Beneficios y desventajas de Strapi + GraphQL + React
+
+ 1- ¿Qué es GraphQL y como implementarlo?
+ 2- Implementación de Strapi con GraphQL y React.
+ 3- Beneficios y desventajas de Strapi + React
+ 4- Beneficios y desventajas de Strapi + GraphQL + React
 
 **Introduccion**. 
+
+
 Intentaremos darle una explicacion a la diferencia en utilizar tecnologias para el desarrollo de backend agil como Strapi, un CMS que nos ayuda a facilitar la creacion de contenido junto al servidor backend y endpoints personalizados para su consumo, de la mano de React del lado cliente o, por otro lado, los beneficios y contras de agregar la capa de GraphQL a estas tecnologias y si es conveniente o no para el desarrollo de proyectos empresariales de alta escalabilidad como los desarrollados en KIUBIX. Vamos al punto.
 
 **GraphQL**. 
 **¿Qué es GraphQL?**. 
+
+
 GraphQL es un lenguaje de consultas para API, brinda una descripción completa y comprensible de los datos del API, también brinda al cliente la capacidad de solicitar exactamente los datos que necesita.
 
 ¿Cómo implementar GraphQL?(ejemplo práctico)
@@ -318,7 +323,7 @@ en Strapi es realizando la instalación de un plugin, que se hace de la siguient
 | -Javascript como lenguaje común por ende la sintaxis es lineal en todo el proyecto  | -Es necesario descargar “React Markdown Package” para editar el texto enriquecido.  |
 | -De entrada usar la API de Strapi nos agrega un mundo de posibilidades de personalización en nuestras requests.  | -Strapi no deja de ser un “enlatado” es probable que si el proyecto escala mucho nos encontremos con limitaciones que sería necesario probar.  |
 | -El panel administrativo de Strapi es super intuitivo de manejar, inclusive para usuarios no-técnicos, agregando una capa de “rapidez” al momento de querer realizar algo rápido.  | -Al momento de realizar cambios de permisos y estar conectado a varios ambientes, estos cambios sólo se reflejan en un solo ambiente. Es necesario entonces hacer los cambios manualmente para todos los ambientes.  |
-| -A comparación de una API REST normal que tomaría más tiempo en desarrollar, Strapi no facilita una implementación más rapida.  | -En el caso particular de Strapi, al estar basado 100% en Javascript puede ser complicado para otros usuarios su compatibilidad con otros lenguajes por ejemplo para Typescript es necesario usar un paquete externo, no hablemos de Python u otros.  |
+| -A comparación de una API REST normal que tomaría más tiempo en desarrollar, Strapi nos facilita una implementación más rapida.  | -En el caso particular de Strapi, al estar basado 100% en Javascript puede ser complicado para otros usuarios su compatibilidad con otros lenguajes por ejemplo para Typescript es necesario usar un paquete externo, no hablemos de Python u otros.  |
 | -Lo anterior dicho se podría resumir en 3 grandes beneficios: menos código, más agilidad en el desarrollo y gran potencial de escalabilidad en nuestro proyecto/idea.  | -Posibles alternativas: Contentful, Netlify CMS, FireBase, Directus o Parse-Server.  |
 
 
