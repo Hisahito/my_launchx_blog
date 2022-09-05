@@ -1,5 +1,5 @@
 ---
-title: Analisis de los Beneficios sobre el uso de Strapi + React vs Strapi + GraphQL + React
+title: Análisis de los Beneficios sobre el uso de Strapi + React vs Strapi + GraphQL + React
 date: 2022-05-05
 description: Pros y Contras de implementar Strapi + GraphQL + React.
 ---
