@@ -73,29 +73,29 @@ GraphQL es un lenguaje de consultas para API, brinda una descripción completa y
 <p>¿Cómo implementar GraphQL?(ejemplo práctico)
 1 Iniciar un proyecto de NodeJS.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">init</span> <span class="o">-</span><span class="nx">y</span>
-</code></pre></div><p><!-- raw HTML omitted -->.</p>
+</code></pre></div><!-- raw HTML omitted -->
 <p>Apollo Server es un servidor de GraphQL, es el más popular y el que tiene mejor documentación. El cliente solicita informacion con las sintaxis de GraphQL a apollo server y apolo server se conecta al REST API, microservicios o una BD,
 consulta la información, la procesa y la devuelve al cliente.</p>
-<p><img src="https://user-images.githubusercontent.com/83984969/188489228-35e20e18-121f-47fd-9db3-87d4c549604d.png" alt="unnamed-2">.</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188489228-35e20e18-121f-47fd-9db3-87d4c549604d.png" alt="unnamed-2"></p>
 <p>2 Instalar apollo y graph.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">i</span> <span class="nx">apollo</span><span class="o">-</span><span class="nx">server</span> <span class="nx">graphql</span>
 </code></pre></div><p>3 Usaremos ECMAScript. para eso abrimos el proyecto y archivo package.json y añadimos la opción “type”: “module”, el archivo debería quedar así
-<img src="https://user-images.githubusercontent.com/83984969/188489572-f9c8ea2a-fc5a-4f60-8362-b6bad7d4ecbc.png" alt="unnamed-3">.</p>
+<img src="https://user-images.githubusercontent.com/83984969/188489572-f9c8ea2a-fc5a-4f60-8362-b6bad7d4ecbc.png" alt="unnamed-3"></p>
 <p>4 Crear el archivo index.js , importar graphql con Apollo-server con :</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span><span class="nx">ApoloServer</span><span class="p">,</span> <span class="nx">gql</span><span class="p">}</span> <span class="nx">from</span> <span class="err">‘</span><span class="nx">apollo</span><span class="o">-</span><span class="nx">server</span><span class="err">’</span>
 </code></pre></div><p>Para mayor practicidad, se usará un array de objetos a modo de base de datos</p>
-<p><img src="https://user-images.githubusercontent.com/83984969/188489716-2c04c57d-9869-4484-9fc6-3191d0471b53.png" alt="unnamed-4">.</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188489716-2c04c57d-9869-4484-9fc6-3191d0471b53.png" alt="unnamed-4"></p>
 <p>5 Es importante definir la estructura de los datos y peticiones
-<img src="https://user-images.githubusercontent.com/83984969/188489805-5653a476-ab1f-4db9-af32-b8d721498971.png" alt="unnamed-5">.</p>
+<img src="https://user-images.githubusercontent.com/83984969/188489805-5653a476-ab1f-4db9-af32-b8d721498971.png" alt="unnamed-5"></p>
 <p>6 Definir las querys.</p>
-<p><img src="https://user-images.githubusercontent.com/83984969/188489898-029a80ec-b1fc-49dc-a888-fc67eb8b0635.png" alt="unnamed-6">.</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188489898-029a80ec-b1fc-49dc-a888-fc67eb8b0635.png" alt="unnamed-6"></p>
 <p>7 crear y ejecutar el servidor. El constructor acepta un objeto con las definiciones de estructuras y las querys. Es muy parecido a express.</p>
-<p><img src="https://user-images.githubusercontent.com/83984969/188490014-9f8f0833-98b3-4132-9a80-7825be79c008.png" alt="unnamed-7">.
+<p><img src="https://user-images.githubusercontent.com/83984969/188490014-9f8f0833-98b3-4132-9a80-7825be79c008.png" alt="unnamed-7">
 al ejecutar el proyecto, este nos arroja una base url y un puerto.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$node</span> <span class="nx">index</span><span class="p">.</span><span class="nx">js</span>
 <span class="nx">Servidor</span> <span class="nx">funcionando</span> <span class="nx">en</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//localhost:4000/
 </span></code></pre></div><p>Al abrir esa url en el navegador veremos algo como esto:</p>
-<p><img src="https://user-images.githubusercontent.com/83984969/188490231-35da2ce2-4358-45f2-9b75-503e38335fce.png" alt="unnamed-8">.</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188490231-35da2ce2-4358-45f2-9b75-503e38335fce.png" alt="unnamed-8"></p>
 <p>si se presiona el botón “Query Your serve” veras una pagina en blanco conectada al servidor apollo donde puedes ejecutar tus querys</p>
 <p><img src="https://user-images.githubusercontent.com/83984969/188490888-a37f8ead-413a-4a69-9e74-5c4f3b676e2a.png" alt="unnamed-9"></p>
 <p>los llamados en Postman son practicamente iguales:</p>
@@ -322,12 +322,11 @@ InMemoryCache es para poder establecer que el caché va a ser guardado en memori
 <td>-Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.</td>
 </tr>
 <tr>
-<td>-lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala.</td>
+<td>-Al existir un solo endpoint es muy facil de mantener y dar mantenimiento del lado del cliente.</td>
 <td>-Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Posibles repercusiones y bloqueos:</strong>.</p>
 <h6 id="escrito-y-analizado-por-alfonso-mendiola-carlos-de-la-cruz-y-victor-morales-para-kiubix"><strong>Escrito y analizado por Alfonso Mendiola, Carlos de la Cruz y Victor Morales para Kiubix.</strong></h6>
 
     </div>
