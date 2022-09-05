@@ -7,10 +7,10 @@ description: Pros y Contras de implementar Strapi + GraphQL + React.
 **indice**
 
 
- 1- ¿Qué es GraphQL y como implementarlo?
- 2- Implementación de Strapi con GraphQL y React.
- 3- Beneficios y desventajas de Strapi + React
- 4- Beneficios y desventajas de Strapi + GraphQL + React
+ 1.¿Qué es GraphQL y como implementarlo?    
+ 2.Implementación de Strapi con GraphQL y React.  
+ 3.Beneficios y desventajas de Strapi + React. 
+ 4.Beneficios y desventajas de Strapi + GraphQL + React. 
 
 **Introduccion**. 
 
@@ -327,6 +327,7 @@ en Strapi es realizando la instalación de un plugin, que se hace de la siguient
 | -Lo anterior dicho se podría resumir en 3 grandes beneficios: menos código, más agilidad en el desarrollo y gran potencial de escalabilidad en nuestro proyecto/idea.  | -Posibles alternativas: Contentful, Netlify CMS, FireBase, Directus o Parse-Server.  |
 
 
+
 **Beneficios y Desventajas de Implementar Strapi, GraphQL & React en conjunto**. 
 
   | Pros | Contras |
@@ -336,7 +337,7 @@ en Strapi es realizando la instalación de un plugin, que se hace de la siguient
 | -Tanto GraphQL como React son desarrollados y mantenidos por Facebook, mucha de su documentación e implementación pueden ayudar a la misma causa al ser los dos de tipo declarativos.  | -Es posible encontrarse con problemas si se requiere describir otro tipo de estructuras que no sean estructuras de objetos.  |
 | -Si ya Strapi amplía nuestras posibilidades, la adición de GraphQL amplía aún más las chances de realizar querys específicas para solventar lo que exactamente necesita el front.  | -GraphQL puede presentar problemas cuando el cliente solicita demasiados datos de campos anidados a la vez. No existe un mecanismo de profundidades máxima de consulta.  |
 | -A pesar de ser tecnologías nuevas, Strapi está muy bien complementado con GraphQL pues cuentan con un playground interno (localhost:1337/graphQL) para ingresar nuestros comandos.  | -Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.  |
-| -Al existir un solo endpoint es muy facil de mantener y dar mantenimiento del lado del cliente.  | -Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.  |
+| -Al existir un solo endpoint es muy facil de mantener y dar mantenimiento del lado del cliente.  | -GraphQL utiliza una sintaxis diferente que rompe el esquema de Strapi + React de puro JS. Es necesario aprenderla, tanto el tipado como el uso de variables. Esto puede tomar tiempo dependiendo de cada desarrollador.  |
 
 
 
