@@ -14,9 +14,7 @@
       
       <guid>https://github.com/hisahito/posts/kiubix1/</guid>
       <description>indice
- ¿Qué es GraphQL y como implementarlo? Implementación de Strapi con GraphQL y React. Beneficios y desventajas de Strapi + React Beneficios y desventajas de Strapi + GraphQL + React  Introduccion
-GraphQL. ¿Qué es GraphQL?. GraphQL es un lenguaje de consultas para API, brinda una descripción completa y comprensible de los datos del API, también brinda al cliente la capacidad de solicitar exactamente los datos que necesita.
-¿Cómo implementar GraphQL?</description>
+ ¿Qué es GraphQL y como implementarlo? Implementación de Strapi con GraphQL y React. Beneficios y desventajas de Strapi + React Beneficios y desventajas de Strapi + GraphQL + React  Introduccion Intentaremos darle una explicacion a la diferencia en utilizar tecnologias para el desarrollo de backend agil como Strapi, un CMS que nos ayuda a facilitar la creacion de contenido junto al servidor backend y endpoints personalizados para su consumo, de la mano de React del lado cliente o, por otro lado, los beneficios y contras de agregar la capa de GraphQL a estas tecnologias y si es conveniente o no para el desarrollo de proyectos empresariales de alta escalabilidad como los desarrollados en KIUBIX.</description>
     </item>
     
     <item>
