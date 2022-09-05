@@ -1,5 +1,5 @@
 ---
-title: Analisis de los Beneficios sobre el uso de GraphQL + Strapi
+title: Analisis de los Beneficios sobre el uso de Strapi + React vs Strapi + GraphQL + React
 date: 2022-05-05
 description: Pros y Contras de implementar Strapi + GraphQL + React.
 ---
@@ -321,6 +321,7 @@ en Strapi es realizando la instalación de un plugin, que se hace de la siguient
 | -A comparación de una API REST normal que tomaría más tiempo en desarrollar, Strapi no facilita una implementación más rapida.  | -En el caso particular de Strapi, al estar basado 100% en Javascript puede ser complicado para otros usuarios su compatibilidad con otros lenguajes por ejemplo para Typescript es necesario usar un paquete externo, no hablemos de Python u otros.  |
 | -Lo anterior dicho se podría resumir en 3 grandes beneficios: menos código, más agilidad en el desarrollo y gran potencial de escalabilidad en nuestro proyecto/idea.  | -Posibles alternativas: Contentful, Netlify CMS, FireBase, Directus o Parse-Server.  |
 
+
 **Beneficios y Desventajas de Implementar Strapi, GraphQL & React en conjunto**. 
 
   | Pros | Contras |
@@ -334,3 +335,5 @@ en Strapi es realizando la instalación de un plugin, que se hace de la siguient
 
 **Posibles repercusiones y bloqueos:**. 
 
+
+###### **Escrito y analizado por Alfonso Mendiola, Carlos de la Cruz y Victor Morales para Kiubix.**
