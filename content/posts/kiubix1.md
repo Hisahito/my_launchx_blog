@@ -50,18 +50,29 @@ Para mayor practicidad, se usará un array de objetos a modo de base de datos
   5 Es importante definir la estructura de los datos y peticiones
 ![unnamed-5](https://user-images.githubusercontent.com/83984969/188489805-5653a476-ab1f-4db9-af32-b8d721498971.png). 
 
-  6 Definir las querys
+  6 Definir las querys. 
+  
+  
   ![unnamed-6](https://user-images.githubusercontent.com/83984969/188489898-029a80ec-b1fc-49dc-a888-fc67eb8b0635.png). 
 
-  7 crear y ejecutar el servidor. El constructor acepta un objeto con las definiciones de estructuras y las querys. Es muy parecido a express.
+  7 crear y ejecutar el servidor. El constructor acepta un objeto con las definiciones de estructuras y las querys. Es muy parecido a express.  
+  
+  
   ![unnamed-7](https://user-images.githubusercontent.com/83984969/188490014-9f8f0833-98b3-4132-9a80-7825be79c008.png). 
-  al ejecutar el proyecto, este nos arroja una base url y un puerto
+  al ejecutar el proyecto, este nos arroja una base url y un puerto. 
+  
+  
   ```javascript
   $node index.js
   Servidor funcionando en https://localhost:4000/
   ```
-  Al abrir esa url en el navegador veremos algo como esto:
+  
+  Al abrir esa url en el navegador veremos algo como esto:  
+  
+  
   ![unnamed-8](https://user-images.githubusercontent.com/83984969/188490231-35da2ce2-4358-45f2-9b75-503e38335fce.png). 
+  
+  
   si se presiona el botón “Query Your serve” veras una pagina en blanco conectada al servidor apollo donde puedes ejecutar tus querys
 
   
