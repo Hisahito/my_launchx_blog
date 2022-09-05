@@ -8,6 +8,18 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/hisahito/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Analisis de los Beneficios sobre el uso de GraphQL &#43; Strapi</title>
+      <link>https://github.com/hisahito/posts/kiubix1/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/hisahito/posts/kiubix1/</guid>
+      <description>indice
+ ¿Qué es GraphQL y como implementarlo? Implementación de Strapi con GraphQL y React. Beneficios y desventajas de Strapi + React Beneficios y desventajas de Strapi + GraphQL + React  Introduccion
+GraphQL. ¿Qué es GraphQL?. GraphQL es un lenguaje de consultas para API, brinda una descripción completa y comprensible de los datos del API, también brinda al cliente la capacidad de solicitar exactamente los datos que necesita.
+¿Cómo implementar GraphQL?</description>
+    </item>
+    
+    <item>
       <title>NFT NO Programmable</title>
       <link>https://github.com/hisahito/posts/post3/</link>
       <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>

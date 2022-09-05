@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Analisis de los Beneficios sobre el uso de GraphQL &#43; Strapi - Bitácora de Viaje de Hisahito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://github.com/hisahitofavicon.png">
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.4f4767d518839223786999cdb69fc7a63791220ecccd236bc732a5f998aaee2d.css">
+  
+
+  
+    <meta name="description" content="Pros y Contras de implementar Strapi &#43; GraphQL &#43; React."/>
+    <meta property="og:title" content="Analisis de los Beneficios sobre el uso de GraphQL &#43; Strapi"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://github.com/hisahito/posts/kiubix1/"/>
+    
+    <meta property="og:description" content="Pros y Contras de implementar Strapi &#43; GraphQL &#43; React."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@hisahitomx"/>
+    <meta name="twitter:creator" content="@hisahitomx"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://github.com/hisahito">Bitácora de Viaje de Hisahito</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-aboutme">
+                <a href="../../pages/about/">AboutMe</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="../../posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Analisis de los Beneficios sobre el uso de GraphQL &#43; Strapi<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <p><strong>indice</strong></p>
+<ol>
+<li>¿Qué es GraphQL y como implementarlo?</li>
+<li>Implementación de Strapi con GraphQL y React.</li>
+<li>Beneficios y desventajas de Strapi + React</li>
+<li>Beneficios y desventajas de Strapi + GraphQL + React</li>
+</ol>
+<p><strong>Introduccion</strong></p>
+<p><strong>GraphQL</strong>.
+<strong>¿Qué es GraphQL?</strong>.
+GraphQL es un lenguaje de consultas para API, brinda una descripción completa y comprensible de los datos del API, también brinda al cliente la capacidad de solicitar exactamente los datos que necesita.</p>
+<p>¿Cómo implementar GraphQL?(ejemplo práctico)
+1 Iniciar un proyecto de NodeJS.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">init</span> <span class="o">-</span><span class="nx">y</span>
+</code></pre></div><p><!-- raw HTML omitted -->.</p>
+<p>Apollo Server es un servidor de GraphQL, es el más popular y el que tiene mejor documentación. El cliente solicita informacion con las sintaxis de GraphQL a apollo server y apolo server se conecta al REST API, microservicios o una BD,
+consulta la información, la procesa y la devuelve al cliente.</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188489228-35e20e18-121f-47fd-9db3-87d4c549604d.png" alt="unnamed-2">.</p>
+<p>2 Instalar apollo y graph.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">i</span> <span class="nx">apollo</span><span class="o">-</span><span class="nx">server</span> <span class="nx">graphql</span>
+</code></pre></div><p>3 Usaremos ECMAScript. para eso abrimos el proyecto y archivo package.json y añadimos la opción “type”: “module”, el archivo debería quedar así
+<img src="https://user-images.githubusercontent.com/83984969/188489572-f9c8ea2a-fc5a-4f60-8362-b6bad7d4ecbc.png" alt="unnamed-3">.</p>
+<p>4 Crear el archivo index.js , importar graphql con Apollo-server con :</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span><span class="nx">ApoloServer</span><span class="p">,</span> <span class="nx">gql</span><span class="p">}</span> <span class="nx">from</span> <span class="err">‘</span><span class="nx">apollo</span><span class="o">-</span><span class="nx">server</span><span class="err">’</span>
+</code></pre></div><p>Para mayor practicidad, se usará un array de objetos a modo de base de datos</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188489716-2c04c57d-9869-4484-9fc6-3191d0471b53.png" alt="unnamed-4">.</p>
+<p>5 Es importante definir la estructura de los datos y peticiones
+<img src="https://user-images.githubusercontent.com/83984969/188489805-5653a476-ab1f-4db9-af32-b8d721498971.png" alt="unnamed-5">.</p>
+<p>6 Definir las querys
+<img src="https://user-images.githubusercontent.com/83984969/188489898-029a80ec-b1fc-49dc-a888-fc67eb8b0635.png" alt="unnamed-6">.</p>
+<p>7 crear y ejecutar el servidor. El constructor acepta un objeto con las definiciones de estructuras y las querys. Es muy parecido a express.
+<img src="https://user-images.githubusercontent.com/83984969/188490014-9f8f0833-98b3-4132-9a80-7825be79c008.png" alt="unnamed-7">.
+al ejecutar el proyecto, este nos arroja una base url y un puerto</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$node</span> <span class="nx">index</span><span class="p">.</span><span class="nx">js</span>
+<span class="nx">Servidor</span> <span class="nx">funcionando</span> <span class="nx">en</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//localhost:4000/
+</span></code></pre></div><p>Al abrir esa url en el navegador veremos algo como esto:
+<img src="https://user-images.githubusercontent.com/83984969/188490231-35da2ce2-4358-45f2-9b75-503e38335fce.png" alt="unnamed-8">.
+si se presiona el botón “Query Your serve” veras una pagina en blanco conectada al servidor apollo donde puedes ejecutar tus querys</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188490888-a37f8ead-413a-4a69-9e74-5c4f3b676e2a.png" alt="unnamed-9"></p>
+<p>los llamados en Postman son practicamente iguales:</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188490981-f4ecd564-7770-4be9-ac01-1361b0e75ef9.png" alt="unnamed-10"></p>
+<p>Aunque es aconcejable usar el sistema propio de apollo-server debido a que genera un tipo de documentación automática respecto a los datos que devuelven los querys.</p>
+<p>Y eso es todo, así de simple puedes crear un servidor de GraphQL con sus querys. no obstante hay muchas otras cosas interesantes que se pueden hacer, veamos:</p>
+<p><strong>Peticiones con parámetros</strong>.</p>
+<p>Se debe hacer otro query y entre paréntesis (como si fuera una función con parámetros) se especifica el nombre del parámetro, el tipo de dato y lo que devuelve.
+En este ejemplo el parámetro hace una búsqueda por nombre.
+en args están todos los argumentos especificados en el query. En este ejemplo se desestructura el “nombre” en una constante aunque se puede hacer desde la definición del argumento.</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188491144-7187bb54-61ac-4faa-b204-9d2bfd090a4b.png" alt="unnamed-11"></p>
+<p>Observa bien que en la llamada se especifican los parámetros con sus valores de esta manera y se especifica los campos que se requiere, en caso de no existir algún campo devolverá “null”</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188491220-d6cee745-34de-4942-aafb-7500ece8e1b5.png" alt="unnamed-12">
+<img src="https://user-images.githubusercontent.com/83984969/188491288-44c29b3d-2c58-4a5f-8264-6cefe9e62f06.png" alt="unnamed-13">
+<img src="https://user-images.githubusercontent.com/83984969/188491303-8ccea2c3-f1f3-4ea7-b47c-3070b7563f15.png" alt="unnamed-14"></p>
+<p><strong>Resolver campos de manera dinámica</strong>.</p>
+<p>Se pueden resolver campos con información de otros campos o con otra lógica resultando en un campo extra al de la información original. IMPORTANTE, el campo resultante se debe especificar en el modelo.
+para este ejemplo añadiremos dos campos extra al modelo “nombreCompleto” y “mayorEdad”.
+Para resolver esos campos, se debe hacer una propiedad extra a lado de los Query con el mismo nombre del modelo y dentro el nombre de los campos con su solución.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="kr">const</span> <span class="nx">typeDefs</span> <span class="o">=</span> <span class="nx">gql</span> <span class="p">{</span>
+    <span class="nx">type</span> <span class="nx">Person</span> <span class="p">{</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="nx">ID</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">nombre</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">apellidos</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">nombreCompleto</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">edad</span><span class="o">:</span> <span class="nx">Int</span><span class="p">,</span>
+      <span class="nx">mayorEdad</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+      <span class="nx">telefono</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">resolvers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">Query</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">personCount</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">person</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+    <span class="nx">allpersons</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">persons</span><span class="p">,</span>
+    <span class="c1">//args son los argumentos que se especifican en la query
+</span><span class="c1"></span>    <span class="nx">findPerson</span><span class="o">:</span> <span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="p">{</span><span class="nx">nombre</span><span class="p">}</span> <span class="o">=</span> <span class="nx">args</span><span class="p">;</span>
+      <span class="k">return</span> <span class="nx">persons</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">person</span> <span class="p">=&gt;</span> <span class="nx">person</span><span class="p">.</span><span class="nx">nombre</span> <span class="o">===</span> <span class="nx">nombre</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+    <span class="nx">Person</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">nombreCompleto</span><span class="o">:</span> <span class="p">(</span><span class="nx">root</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="err">´</span><span class="nx">$</span><span class="p">{</span><span class="nx">root</span><span class="p">.</span><span class="nx">nombre</span><span class="p">}</span> <span class="nx">$</span><span class="p">{</span><span class="nx">root</span><span class="p">.</span><span class="nx">apellido</span><span class="p">}</span> <span class="err">´</span><span class="p">,</span>
+      <span class="nx">mayorEdad</span><span class="o">:</span> <span class="p">(</span><span class="nx">root</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">root</span><span class="p">.</span><span class="nx">edad</span> <span class="o">&gt;</span> <span class="mi">17</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p><img src="https://user-images.githubusercontent.com/83984969/188492335-2f7d3253-6f97-4ec1-be6c-c47543a81955.png" alt="unnamed-15"></p>
+<p><strong>Tipos de datos personalizados</strong>.</p>
+<p>Un tipo de dato personalizado en un modelo en realidad es un objeto. para usarlo, se debe declarar un modelo y usarlo como propiedad de otro modelo y como una propiedad común, se puede resolver y al hacer el llamado en la query,
+también se pueden especificar los datos que se requieren:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="kr">const</span> <span class="nx">typeDefs</span> <span class="o">=</span> <span class="nx">gql</span> <span class="p">{</span>
+    <span class="nx">type</span> <span class="nx">nombreCompleto</span> <span class="p">{</span>
+      <span class="nx">nombre</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">apellidos</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span>
+    <span class="p">},</span>
+    <span class="nx">type</span> <span class="nx">Person</span> <span class="p">{</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="nx">ID</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">nombre</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">apellidos</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">nombreCompleto</span><span class="o">:</span> <span class="nx">nombreCompleto</span><span class="o">!</span><span class="p">,</span>
+      <span class="nx">edad</span><span class="o">:</span> <span class="nx">Int</span><span class="p">,</span>
+      <span class="nx">mayorEdad</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+      <span class="nx">telefono</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">   <span class="nx">Person</span><span class="o">:</span> <span class="p">{</span>
+     <span class="nx">nombreCompleto</span><span class="o">:</span> <span class="p">(</span><span class="nx">root</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+       <span class="k">return</span><span class="p">{</span>
+         <span class="nx">nombre</span><span class="o">:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">nombre</span><span class="p">,</span>
+         <span class="nx">apellido</span><span class="o">:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">apellido</span>
+       <span class="p">}</span>
+     <span class="p">},</span>
+     <span class="nx">mayorEdad</span><span class="o">:</span> <span class="p">(</span><span class="nx">root</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">root</span><span class="p">.</span><span class="nx">edad</span> <span class="o">&gt;</span> <span class="mi">17</span>
+<span class="p">}</span>
+</code></pre></div><p><img src="https://user-images.githubusercontent.com/83984969/188492951-2002aaaf-25b8-46f6-9f42-1c5a018f10a1.png" alt="unnamed-16"></p>
+<p>Como podemos observar, los datos que manejamos con GraphQL tiene una estructura completamente diferente a la bd, devolviendo campos que ni siquiera están en la bd original. De este modo podemos cambiar la manera en
+la que se envían y reciben los datos en el cliente sin necesidad de cambiar el modelo o entidad de la BD, los datos simplemente se procesan y se adaptan.</p>
+<p><strong>Mutaciones</strong>.</p>
+<p>Las mutaciones son maneras para modificar información, en este caso las usaremos para añadir más personas a la bd. recordar que aunque estamos usando un array como bd, también podemos usar una de mongo o sql u otras API
+Para hacer una mutación, primero y como todo en GraphQL, se debe definir en el modelo y el los resolvers
+Para completar el ejemplo correctamente instalaremos, importamos y usaremos uuid con:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">   <span class="nx">npm</span> <span class="nx">i</span> <span class="nx">uuid</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">      <span class="nx">type</span> <span class="nx">Query</span> <span class="p">{</span>
+        <span class="nx">personcount</span><span class="o">:</span> <span class="nx">Int</span><span class="o">!</span><span class="p">,</span>
+        <span class="nx">allPersons</span><span class="o">:</span> <span class="p">[</span><span class="nx">Person</span><span class="o">!</span><span class="p">],</span>
+        <span class="nx">findPerson</span><span class="o">:</span> <span class="p">(</span><span class="nx">nombre</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">)</span> <span class="nx">Person</span>
+  <span class="p">}</span>
+  
+    <span class="nx">type</span> <span class="nx">Mutation</span> <span class="p">{</span>
+      <span class="nx">addPerson</span><span class="p">(</span>
+        <span class="nx">nombre</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+        <span class="nx">apellidos</span><span class="o">:</span> <span class="nb">String</span><span class="o">!</span><span class="p">,</span>
+        <span class="nx">edad</span><span class="o">:</span> <span class="nx">Int</span><span class="p">,</span>
+        <span class="nx">telefono</span><span class="o">:</span> <span class="nb">String</span>
+      <span class="p">)</span><span class="o">:</span><span class="nx">Person</span>
+    <span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="nx">Mutation</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">addPerson</span><span class="o">:</span> <span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">args</span><span class="p">,</span> <span class="nx">id</span><span class="o">:</span> <span class="nx">uuid</span><span class="p">()</span> <span class="p">}</span>
+    <span class="nx">persons</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">person</span><span class="p">;</span>
+  <span class="p">}</span>
+ <span class="p">},</span>
+  <span class="nx">person</span><span class="o">:</span> <span class="p">{</span>
+</code></pre></div><p>Al momento de hacer la mutación, también se debe especificar los datos deseados de retorno</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188494354-f1f239ec-23d3-46c7-8d47-70d62916316f.png" alt="unnamed-17"></p>
+<p>Como seguramente ya notaste, lo interesante está en los resolvers, desde esa seccion de codigo indicas cómo transformar la información</p>
+<p><strong>Implementación de Strapi con GraphQL y React</strong>.</p>
+<p>Primero que nada, debemos entender que el hecho de usar GraphQL no representa un cambio tal cual al momento de realizar la instalación de Strapi cuando vamos a crear el proyecto nuevo, ¿la razón? Usar GraphQL
+en Strapi es realizando la instalación de un plugin, que se hace de la siguiente manera:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">   <span class="nx">strapi</span> <span class="nx">install</span> <span class="nx">graphql</span>
+</code></pre></div><p>A continuación, debemos instalar dos paquetes muy importantes para el uso de GraphQL en nuestro proyecto:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="nx">npm</span> <span class="nx">install</span> <span class="err">@</span><span class="nx">apollo</span><span class="o">/</span><span class="nx">client</span> <span class="nx">graphql</span>
+</code></pre></div><p>Ya una vez con esto en nuestro proyecto de React, dentro del componente que queremos utilizar o queramos utilizar GraphQL. Vamos a importar useQuery y gql del paquete “@apollo/client”.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="kr">import</span> <span class="p">{</span> <span class="nx">useQuery</span><span class="p">,</span> <span class="nx">gql</span> <span class="p">}</span> <span class="nx">from</span> <span class="err">@</span><span class="nx">apollo</span><span class="o">/</span><span class="nx">client</span>
+</code></pre></div><p>La manera en que podemos pedir datos al backend utilizando GraphQL, es llamando a ”gql” y usando las backtick para generar un formato legible y poder realizar nuestra consulta, y debería verse algo así:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="kr">const</span> <span class="nx">BLOGS</span> <span class="o">=</span> <span class="nx">gql</span> <span class="err">´</span>
+  <span class="p">{</span>
+    <span class="nx">blogs</span><span class="p">{</span>
+      <span class="nx">data</span><span class="p">{</span>
+        <span class="nx">id</span><span class="p">,</span>
+        <span class="nx">attributes</span><span class="p">{</span>
+          <span class="nx">Title</span><span class="p">,</span>
+          <span class="nx">Body</span><span class="p">,</span>
+          <span class="nx">Author</span>
+        <span class="p">}</span> 
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="err">´</span>
+</code></pre></div><p>Ahora ya tenemos nuestra query creada, y con esto podemos hacer una consulta para poder obtener la información que necesitamos. Vamos a usar ahora el useQuery, que importamos igual de “@apollo/client”,
+para hacer la consulta y de esta misma, podemos aplicar “destructuring” para obtener 3 valores principales, el de loading, el de error, y el de data. Con estos podemos realizar una lógica en donde si la información
+está cargando podemos devolver un componente como una pantalla de carga o bien, un mensaje solamente, ya que nos permite como el nombre lo indica, saber si está siendo cargada la información. El siguiente es error,
+que es evidente el objetivo que tiene, ya que nos permite identificar qué salió mal y poder ya sea devolver un componente donde le digamos al usuario que ha ocurrido algo, o la información no fue encontrada,
+o solamente devolverle a un componente diferente. Por último, pero igual de importante, tenemos el de data, en donde aquí vendrá la información que trajo nuestra consulta. A continuación, un ejemplo de esto mencionado:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="kr">const</span> <span class="p">{</span> <span class="nx">loading</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">(</span><span class="nx">BLOGS</span><span class="p">);</span>
+ <span class="k">if</span> <span class="p">(</span><span class="nx">loading</span><span class="p">)</span> <span class="k">return</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span> <span class="nx">loading</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+ <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="k">return</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span> <span class="s2">&#34;Error :(&#34;</span> <span class="o">&lt;</span><span class="err">/p&gt;</span>
+</code></pre></div><p>De data puedes acceder a la información de lo que solicitaste, por ejemplo, en los códigos mostrados, al haber pedido blogs, entonces en nuestra data, hay una propiedad llamada blogs en donde tiene a su vez su propia data,
+que son los registros de nuestra información anteriormente solicitada. Se puede hacer la lógica que se requiera, como recorrer la data y que cada elemento contenido se muestre de manera determinada con HTML y CSS. Ejemplo:</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188498947-ed7e3b4b-8eb2-402a-8d3e-f41213331bc4.png" alt="unnamed-18"></p>
+<p>Como desarrolladores web, podremos querer recibir variables para poder realizar consultas a gusto y necesidad del usuario, haciendo uso de un id, nombre, email, entre otros atributos que podríamos usar como parámetros para realizar una consulta.
+Afortunadamente, es sencillo poder hacer esto, ya que podemos decirle a gql, que queremos hacer uso de variables de la siguiente forma:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="kr">const</span> <span class="nx">BLOGS</span> <span class="o">=</span> <span class="nx">gql</span> <span class="err">´</span>
+  <span class="nx">query</span> <span class="nx">GetBlog</span><span class="p">(</span> <span class="nx">id</span><span class="o">:</span> <span class="nx">ID</span><span class="o">!</span><span class="p">){</span>
+    <span class="nx">blog</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span> <span class="nx">$id</span><span class="p">){</span>
+      <span class="nx">data</span><span class="p">{</span>
+        <span class="nx">id</span><span class="p">,</span>
+        <span class="nx">attributes</span><span class="p">{</span>
+          <span class="nx">Title</span><span class="p">,</span>
+          <span class="nx">Body</span><span class="p">,</span>
+          <span class="nx">Author</span>
+        <span class="p">}</span> 
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="err">´</span>
+</code></pre></div><p>Como se puede apreciar, estamos haciendo uso de $id, pero, la pregunta es cómo hacer para decirle a gql qué valor debe tomar ese $id. Lo hacemos pasándole como segundo parámetro a nuestra función de useQuery, un objeto que tiene una propiedad llamada
+variables que igualmente a su vez es un objeto donde vamos a establecer las variables que va a hacer uso gql para realizar nuestra consulta. Ejemplo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="kr">const</span> <span class="p">{</span> <span class="nx">loading</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">(</span><span class="nx">BLOGS</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">variable</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="nx">id</span> <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div><p>Ahora, debemos inicializar primero nuestro Apollo Client en el App.js, y para ello vamos a crear un objeto, podemos llamarlo de la manera que se desee, pero, por cuestiones de ejemplificar de la mejor forma lo denominaremos “client”.
+Pasaremos como parámetro un objeto que tendrá 2 propiedades, la uri y el cache que es dónde va a ser guardado el mismo. Importaremos 3 cosas para este paso, ApolloClient, InMemoryCache y ApolloProvider. Apollo Client es para poder inicializar nuestro cliente,
+InMemoryCache es para poder establecer que el caché va a ser guardado en memoria y el ApolloProvider tiene un funcionamiento similar al context que maneja React, y nos permite se establecer el cliente en el context para poder acceder desde cualquier componente.</p>
+<p><img src="https://user-images.githubusercontent.com/83984969/188499474-344fb430-d8ac-4bc0-9d15-6edc6b4e1891.png" alt="unnamed-19"></p>
+<p><strong>Beneficios y Desventajas de Implementar Strapi + React en conjunto</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Contras</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-Javascript como lenguaje común por ende la sintaxis es lineal en todo el proyecto</td>
+<td>-Es necesario descargar “React Markdown Package” para editar el texto enriquecido.</td>
+</tr>
+<tr>
+<td>-De entrada usar la API de Strapi nos agrega un mundo de posibilidades de personalización en nuestras requests.</td>
+<td>-Strapi no deja de ser un “enlatado” es probable que si el proyecto escala mucho nos encontremos con limitaciones que sería necesario probar.</td>
+</tr>
+<tr>
+<td>-El panel administrativo de Strapi es super intuitivo de manejar, inclusive para usuarios no-técnicos, agregando una capa de “rapidez” al momento de querer realizar algo rápido.</td>
+<td>-Al momento de realizar cambios de permisos y estar conectado a varios ambientes, estos cambios sólo se reflejan en un solo ambiente. Es necesario entonces hacer los cambios manualmente para todos los ambientes.</td>
+</tr>
+<tr>
+<td>-A comparación de una API REST normal que tomaría más tiempo en desarrollar, Strapi no facilita una implementación más rapida.</td>
+<td>-En el caso particular de Strapi, al estar basado 100% en Javascript puede ser complicado para otros usuarios su compatibilidad con otros lenguajes por ejemplo para Typescript es necesario usar un paquete externo, no hablemos de Python u otros.</td>
+</tr>
+<tr>
+<td>-Lo anterior dicho se podría resumir en 3 grandes beneficios: menos código, más agilidad en el desarrollo y gran potencial de escalabilidad en nuestro proyecto/idea.</td>
+<td>-Posibles alternativas: Contentful, Netlify CMS, FireBase, Directus o Parse-Server.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beneficios y Desventajas de Implementar Strapi, GraphQL &amp; React en conjunto</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Contras</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-Utilizar GraphQL + React le agrega una capa extra de seguridad pues se utiliza un solo endpoint POST para peticiones encriptadas.</td>
+<td>-Usuarios acostumbrados a trabajar en archivos .tsx tendrían que descargar paquetes externos para aplicarlo con Strapi.(BETA).</td>
+</tr>
+<tr>
+<td>-La facilidad que agrega el usar Axios o Fetch en React para que el Front realice sus request una sola URL/endpoint.</td>
+<td>-Es virtualmente imposible tomar API que ya existen y reescribirlas con GraphQL. Se tendría que diseñar una nueva versión desde cero.</td>
+</tr>
+<tr>
+<td>-Tanto GraphQL como React son desarrollados y mantenidos por Facebook, mucha de su documentación e implementación pueden ayudar a la misma causa al ser los dos de tipo declarativos.</td>
+<td>-Es posible encontrarse con problemas si se requiere describir otro tipo de estructuras que no sean estructuras de objetos.</td>
+</tr>
+<tr>
+<td>-Si ya Strapi amplía nuestras posibilidades, la adición de GraphQL amplía aún más las chances de realizar querys específicas para solventar lo que exactamente necesita el front.</td>
+<td>-GraphQL puede presentar problemas cuando el cliente solicita demasiados datos de campos anidados a la vez. No existe un mecanismo de profundidades máxima de consulta.</td>
+</tr>
+<tr>
+<td>-A pesar de ser tecnologías nuevas, Strapi está muy bien complementado con GraphQL pues cuentan con un playground interno (localhost:1337/graphQL) para ingresar nuestros comandos.</td>
+<td>-Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.</td>
+</tr>
+<tr>
+<td>-lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala.</td>
+<td>-Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Posibles repercusiones y bloqueos:</strong>.</p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/hisahitomx" title="twitter" target="_blank" rel="noopener">
+          <img src="../../images/social/twitter.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/hisahito" title="github" target="_blank" rel="noopener">
+          <img src="../../images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="../../js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>
