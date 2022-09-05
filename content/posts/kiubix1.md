@@ -23,13 +23,13 @@ GraphQL es un lenguaje de consultas para API, brinda una descripción completa y
   ```javascript
  npm init -y
 ```
-<img width="598" alt="Captura de Pantalla 2022-09-05 a la(s) 11 06 03" src="https://user-images.githubusercontent.com/83984969/188489203-d66ffaa0-0d85-4e85-bd83-5882f3d8b616.png">. 
+<img width="598" alt="Captura de Pantalla 2022-09-05 a la(s) 11 06 03" src="https://user-images.githubusercontent.com/83984969/188489203-d66ffaa0-0d85-4e85-bd83-5882f3d8b616.png"> 
 
 
 Apollo Server es un servidor de GraphQL, es el más popular y el que tiene mejor documentación. El cliente solicita informacion con las sintaxis de GraphQL a apollo server y apolo server se conecta al REST API, microservicios o una BD, 
 consulta la información, la procesa y la devuelve al cliente.
 
-![unnamed-2](https://user-images.githubusercontent.com/83984969/188489228-35e20e18-121f-47fd-9db3-87d4c549604d.png). 
+![unnamed-2](https://user-images.githubusercontent.com/83984969/188489228-35e20e18-121f-47fd-9db3-87d4c549604d.png) 
 
   2 Instalar apollo y graph.    
   ```javascript
@@ -37,7 +37,7 @@ consulta la información, la procesa y la devuelve al cliente.
 ```
 
   3 Usaremos ECMAScript. para eso abrimos el proyecto y archivo package.json y añadimos la opción “type”: “module”, el archivo debería quedar así
-![unnamed-3](https://user-images.githubusercontent.com/83984969/188489572-f9c8ea2a-fc5a-4f60-8362-b6bad7d4ecbc.png). 
+![unnamed-3](https://user-images.githubusercontent.com/83984969/188489572-f9c8ea2a-fc5a-4f60-8362-b6bad7d4ecbc.png) 
 
   4 Crear el archivo index.js , importar graphql con Apollo-server con :
   ```javascript
@@ -45,20 +45,20 @@ import {ApoloServer, gql} from ‘apollo-server’
   ```
 Para mayor practicidad, se usará un array de objetos a modo de base de datos
 
-![unnamed-4](https://user-images.githubusercontent.com/83984969/188489716-2c04c57d-9869-4484-9fc6-3191d0471b53.png). 
+![unnamed-4](https://user-images.githubusercontent.com/83984969/188489716-2c04c57d-9869-4484-9fc6-3191d0471b53.png) 
 
   5 Es importante definir la estructura de los datos y peticiones
-![unnamed-5](https://user-images.githubusercontent.com/83984969/188489805-5653a476-ab1f-4db9-af32-b8d721498971.png). 
+![unnamed-5](https://user-images.githubusercontent.com/83984969/188489805-5653a476-ab1f-4db9-af32-b8d721498971.png) 
 
   6 Definir las querys. 
   
   
-  ![unnamed-6](https://user-images.githubusercontent.com/83984969/188489898-029a80ec-b1fc-49dc-a888-fc67eb8b0635.png). 
+  ![unnamed-6](https://user-images.githubusercontent.com/83984969/188489898-029a80ec-b1fc-49dc-a888-fc67eb8b0635.png) 
 
   7 crear y ejecutar el servidor. El constructor acepta un objeto con las definiciones de estructuras y las querys. Es muy parecido a express.  
   
   
-  ![unnamed-7](https://user-images.githubusercontent.com/83984969/188490014-9f8f0833-98b3-4132-9a80-7825be79c008.png). 
+  ![unnamed-7](https://user-images.githubusercontent.com/83984969/188490014-9f8f0833-98b3-4132-9a80-7825be79c008.png) 
   al ejecutar el proyecto, este nos arroja una base url y un puerto. 
   
   
@@ -70,7 +70,7 @@ Para mayor practicidad, se usará un array de objetos a modo de base de datos
   Al abrir esa url en el navegador veremos algo como esto:  
   
   
-  ![unnamed-8](https://user-images.githubusercontent.com/83984969/188490231-35da2ce2-4358-45f2-9b75-503e38335fce.png). 
+  ![unnamed-8](https://user-images.githubusercontent.com/83984969/188490231-35da2ce2-4358-45f2-9b75-503e38335fce.png) 
   
   
   si se presiona el botón “Query Your serve” veras una pagina en blanco conectada al servidor apollo donde puedes ejecutar tus querys
@@ -331,9 +331,10 @@ en Strapi es realizando la instalación de un plugin, que se hace de la siguient
 | -Tanto GraphQL como React son desarrollados y mantenidos por Facebook, mucha de su documentación e implementación pueden ayudar a la misma causa al ser los dos de tipo declarativos.  | -Es posible encontrarse con problemas si se requiere describir otro tipo de estructuras que no sean estructuras de objetos.  |
 | -Si ya Strapi amplía nuestras posibilidades, la adición de GraphQL amplía aún más las chances de realizar querys específicas para solventar lo que exactamente necesita el front.  | -GraphQL puede presentar problemas cuando el cliente solicita demasiados datos de campos anidados a la vez. No existe un mecanismo de profundidades máxima de consulta.  |
 | -A pesar de ser tecnologías nuevas, Strapi está muy bien complementado con GraphQL pues cuentan con un playground interno (localhost:1337/graphQL) para ingresar nuestros comandos.  | -Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.  |
-| -lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala.  | -Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.  |
+| -Al existir un solo endpoint es muy facil de mantener y dar mantenimiento del lado del cliente.  | -Tanto Strapi y GraphQL son tecnologías relativamente nuevas por ello tienen constantes actualizaciones en donde su sintaxis suele cambiar.  |
 
-**Posibles repercusiones y bloqueos:**. 
+
+
 
 
 ###### **Escrito y analizado por Alfonso Mendiola, Carlos de la Cruz y Victor Morales para Kiubix.**
