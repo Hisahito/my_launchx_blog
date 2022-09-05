@@ -12,7 +12,7 @@ description: Pros y Contras de implementar Strapi + GraphQL + React.
 4. Beneficios y desventajas de Strapi + GraphQL + React
 
 **Introduccion**
-
+Intentaremos darle una explicacion a la diferencia en utilizar tecnologias para el desarrollo de backend agil como Strapi, un CMS que nos ayuda a facilitar la creacion de contenido junto al servidor backend y endpoints personalizados para su consumo, de la mano de React del lado cliente o, por otro lado, los beneficios y contras de agregar la capa de GraphQL a estas tecnologias y si es conveniente o no para el desarrollo de proyectos empresariales de alta escalabilidad como los desarrollados en KIUBIX. Vamos al punto.
 
 **GraphQL**. 
 **¿Qué es GraphQL?**. 
