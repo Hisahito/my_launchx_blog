@@ -22,5 +22,9 @@ GraphQL es un lenguaje de consultas para API, brinda una descripción completa y
 ```
 
 
+
+Apollo Server es un servidor de GraphQL, es el más popular y el que tiene mejor documentación. El cliente solicita informacion con las sintaxis de GraphQL a apollo server y apolo server se conecta al REST API, microservicios o una BD, consulta la información, la procesa y la devuelve al cliente.
+
+
  
  
